@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detailBeam.obj-c2d4567b940b48e0db7c8bf69f0a4073.mesh"
+
+[deps]
+
+files=[ "res://.import/detailBeam.obj-c2d4567b940b48e0db7c8bf69f0a4073.mesh" ]
+
+source_file="res://Models/OBJ format/detailBeam.obj"
+dest_files=[ "res://.import/detailBeam.obj-c2d4567b940b48e0db7c8bf69f0a4073.mesh", "res://.import/detailBeam.obj-c2d4567b940b48e0db7c8bf69f0a4073.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

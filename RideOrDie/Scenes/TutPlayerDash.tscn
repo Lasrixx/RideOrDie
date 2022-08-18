@@ -1,0 +1,263 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/DestructArea.gd" type="Script" id=1]
+[ext_resource path="res://Models/dots.material" type="Material" id=2]
+[ext_resource path="res://Scenes/Viewport.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/GoalTutDash.gd" type="Script" id=4]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/wallA.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/PlayerDash.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Viewport3.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Viewport2.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Viewport4.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=12]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("3dLabel/Viewport")
+
+[sub_resource type="ViewportTexture" id=2]
+viewport_path = NodePath("3dLabel2/Viewport2")
+
+[sub_resource type="ViewportTexture" id=3]
+viewport_path = NodePath("3dLabel4/Viewport4")
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("3dLabel3/Viewport3")
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 10.2, 5.2, 0.6 )
+
+[sub_resource type="SphereShape" id=7]
+
+[node name="TutPlayerDash" type="Spatial"]
+
+[node name="GUI" parent="." instance=ExtResource( 12 )]
+
+[node name="Floor" parent="." instance=ExtResource( 6 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0255299, 1.90735e-06, -0.01301 )
+
+[node name="wallA" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0602665, 37.4762 )
+
+[node name="wallA2" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0917759, 12.4881 )
+
+[node name="wallA3" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -12.4614 )
+
+[node name="wallA4" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -37.1257 )
+
+[node name="wallA5" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 26, 0, 15, 0, -1, 0, -1.1365e-06, -36.5274, 0.0167031, -49.8342 )
+
+[node name="wallA6" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, -11.1244, 0.0167031, -49.8342 )
+
+[node name="wallA7" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 13.8144, 0.0167031, -49.8342 )
+
+[node name="wallA8" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 38.4952, 0.0167031, -49.8342 )
+
+[node name="wallA9" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -37.1267 )
+
+[node name="wallA10" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -12.2871 )
+
+[node name="wallA11" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, 12.483 )
+
+[node name="wallA12" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -3.7749e-06, 0, 15, 0, 1.50996e-07, 0, -25, 50.021, 0.0167031, 37.2635 )
+
+[node name="wallA13" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -27, 0, 15, 0, 1, 0, -1.18021e-06, 38.0534, 0.0167031, 50.3777 )
+
+[node name="wallA14" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, 12.0842, 0.0167031, 50.3777 )
+
+[node name="wallA15" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -12.9327, 0.0167031, 50.3777 )
+
+[node name="wallA16" parent="." groups=["Sides"] instance=ExtResource( 7 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -37.7442, 0.0167031, 50.3777 )
+
+[node name="Wall" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -1.93289 )
+
+[node name="Wall13" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -11.4781 )
+
+[node name="Wall14" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -20.4634 )
+
+[node name="Wall15" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -26.8188 )
+
+[node name="Wall16" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -33.742 )
+
+[node name="Wall17" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -42.5234 )
+
+[node name="Wall18" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -42.5234 )
+
+[node name="Wall19" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -49.3239 )
+
+[node name="Wall20" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -49.3239 )
+
+[node name="Wall2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -1.71738 )
+
+[node name="Wall5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -11.4308 )
+
+[node name="Wall6" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -21.1706 )
+
+[node name="Wall7" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -29.7575 )
+
+[node name="Wall8" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -36.5847 )
+
+[node name="Wall9" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -35.4116 )
+
+[node name="Wall10" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -41.3934 )
+
+[node name="Wall11" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -45.7942 )
+
+[node name="Wall12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -44.4055 )
+
+[node name="Wall3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.821011, 0, 3.33553 )
+
+[node name="Wall21" parent="." groups=["Wall"] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410472, 0.00751591, -5.22551 )
+
+[node name="Wall4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10502, 0, 3.33553 )
+
+[node name="3dLabel" type="Sprite3D" parent="."]
+transform = Transform( 1.10569, 0, 0, 0, 1.69352, 0, 0, 0, 1, -2.14364, 2.43049, -4.82269 )
+flip_v = true
+texture = SubResource( 1 )
+
+[node name="Viewport" type="Viewport" parent="3dLabel"]
+size = Vector2( 400, 25 )
+transparent_bg = true
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="3dLabel/Viewport"]
+modulate = Color( 0.329412, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "As dash, you can get a directional dash using Left Click"
+align = 1
+valign = 1
+
+[node name="3dLabel2" type="Sprite3D" parent="."]
+transform = Transform( 1.21801, 0, 0, 0, 1.7893, 0, 0, 0, 1, 2.43309, 2.43049, -4.82269 )
+flip_v = true
+texture = SubResource( 2 )
+
+[node name="Viewport2" type="Viewport" parent="3dLabel2"]
+size = Vector2( 400, 25 )
+transparent_bg = true
+script = ExtResource( 10 )
+
+[node name="Label2" type="Label" parent="3dLabel2/Viewport2"]
+modulate = Color( 0.0784314, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "You can also dash through walls when the prompt appears"
+align = 1
+valign = 1
+
+[node name="3dLabel4" type="Sprite3D" parent="."]
+transform = Transform( 1.32922, 0, 0, 0, 1.87052, 0, 0, 0, 1, -0.795963, 2.24589, -16.1301 )
+flip_v = true
+texture = SubResource( 3 )
+
+[node name="Viewport4" type="Viewport" parent="3dLabel4"]
+size = Vector2( 400, 48 )
+transparent_bg = true
+script = ExtResource( 11 )
+
+[node name="Label4" type="Label" parent="3dLabel4/Viewport4"]
+modulate = Color( 0.211765, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "You can't dash through dark grey walls
+
+Proceed to Exit."
+align = 1
+valign = 1
+
+[node name="3dLabel3" type="Sprite3D" parent="."]
+transform = Transform( 1.19628, 0, 0, 0, 1.93947, 0, 0, 0, 1, 0.205065, 1.27397, -4.18103 )
+flip_v = true
+billboard = 1
+transparent = false
+texture = SubResource( 4 )
+
+[node name="Viewport3" type="Viewport" parent="3dLabel3"]
+size = Vector2( 400, 25 )
+transparent_bg = true
+script = ExtResource( 9 )
+
+[node name="Label3" type="Label" parent="3dLabel3/Viewport3"]
+modulate = Color( 0.0941176, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Move toward the wall and dash to proceed"
+align = 1
+valign = 1
+
+[node name="DestructableWall" parent="." groups=["DestructWall"] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85337, -0.516752, -16.7915 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 5 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 2 )
+
+[node name="GoalTutDash" type="Area" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.759449, -7.18067, -44.9136 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GoalTutDash"]
+transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 2, -0.0380785, 3.75528, 0.345646 )
+shape = SubResource( 7 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.759449, 2.96153, -44.9136 )
+light_color = Color( 0.243137, 1, 0, 1 )
+light_energy = 16.0
+omni_range = 13.048
+
+[node name="PlayerDash" parent="." groups=["Player"] instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.24819, 0 )

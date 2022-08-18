@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grass.obj-1c09d5e1cea77ba013b0a935a3d3b232.mesh"
+
+[deps]
+
+files=[ "res://.import/grass.obj-1c09d5e1cea77ba013b0a935a3d3b232.mesh" ]
+
+source_file="res://Models/OBJ format/grass.obj"
+dest_files=[ "res://.import/grass.obj-1c09d5e1cea77ba013b0a935a3d3b232.mesh", "res://.import/grass.obj-1c09d5e1cea77ba013b0a935a3d3b232.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

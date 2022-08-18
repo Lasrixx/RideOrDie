@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blasterQ.obj-aeb0026ec833b25a2dc851211850169c.mesh"
+
+[deps]
+
+files=[ "res://.import/blasterQ.obj-aeb0026ec833b25a2dc851211850169c.mesh" ]
+
+source_file="res://gun models obj/blasterQ.obj"
+dest_files=[ "res://.import/blasterQ.obj-aeb0026ec833b25a2dc851211850169c.mesh", "res://.import/blasterQ.obj-aeb0026ec833b25a2dc851211850169c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

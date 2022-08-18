@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh"
+
+[deps]
+
+files=[ "res://.import/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh" ]
+
+source_file="res://Models/OBJ format/detailBarrier_typeB.obj"
+dest_files=[ "res://.import/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh", "res://.import/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,241 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/GoalTut.gd" type="Script" id=2]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/wallA.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Viewport.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Viewport3.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Viewport2.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Viewport4.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=11]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="ViewportTexture" id=2]
+viewport_path = NodePath("3dLabel/Viewport")
+
+[sub_resource type="ViewportTexture" id=3]
+viewport_path = NodePath("3dLabel2/Viewport2")
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("3dLabel3/Viewport3")
+
+[sub_resource type="ViewportTexture" id=5]
+viewport_path = NodePath("3dLabel4/Viewport4")
+
+[node name="TutorialPlayer" type="Spatial"]
+
+[node name="GUI" parent="." instance=ExtResource( 11 )]
+
+[node name="Floor" parent="." instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0255299, 1.90735e-06, -0.01301 )
+
+[node name="wallA" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0602665, 37.4762 )
+
+[node name="wallA2" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0917759, 12.4881 )
+
+[node name="wallA3" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -12.4614 )
+
+[node name="wallA4" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -37.1257 )
+
+[node name="wallA5" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 26, 0, 15, 0, -1, 0, -1.1365e-06, -36.5274, 0.0167031, -49.8342 )
+
+[node name="wallA6" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, -11.1244, 0.0167031, -49.8342 )
+
+[node name="wallA7" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 13.8144, 0.0167031, -49.8342 )
+
+[node name="wallA8" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 38.4952, 0.0167031, -49.8342 )
+
+[node name="wallA9" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -37.1267 )
+
+[node name="wallA10" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -12.2871 )
+
+[node name="wallA11" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, 12.483 )
+
+[node name="wallA12" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.7749e-06, 0, 15, 0, 1.50996e-07, 0, -25, 50.021, 0.0167031, 37.2635 )
+
+[node name="wallA13" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -27, 0, 15, 0, 1, 0, -1.18021e-06, 38.0534, 0.0167031, 50.3777 )
+
+[node name="wallA14" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, 12.0842, 0.0167031, 50.3777 )
+
+[node name="wallA15" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -12.9327, 0.0167031, 50.3777 )
+
+[node name="wallA16" parent="." groups=["Sides"] instance=ExtResource( 6 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -37.7442, 0.0167031, 50.3777 )
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource( 1 )]
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -1.93289 )
+
+[node name="Wall13" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -11.4781 )
+
+[node name="Wall14" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -20.4634 )
+
+[node name="Wall15" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -26.8188 )
+
+[node name="Wall16" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -33.742 )
+
+[node name="Wall17" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -42.5234 )
+
+[node name="Wall18" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -42.5234 )
+
+[node name="Wall19" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -49.3239 )
+
+[node name="Wall20" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.81752, 0, -49.3239 )
+
+[node name="Wall2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -1.71738 )
+
+[node name="Wall5" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -11.4308 )
+
+[node name="Wall6" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -21.1706 )
+
+[node name="Wall7" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -29.7575 )
+
+[node name="Wall8" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -36.5847 )
+
+[node name="Wall9" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -35.4116 )
+
+[node name="Wall10" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -41.3934 )
+
+[node name="Wall11" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -45.7942 )
+
+[node name="Wall12" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5338, 0, -44.4055 )
+
+[node name="Wall3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.821011, 0, 3.33553 )
+
+[node name="Wall21" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18217, 0.00751591, -5.22551 )
+
+[node name="Wall4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10502, 0, 3.33553 )
+
+[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 5 )]
+transform = Transform( -0.999234, 0, -0.0391204, 0, 1, 0, 0.0391204, 0, -0.999234, -2.32904, 1.10776, -21.4567 )
+
+[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 5 )]
+transform = Transform( -0.999773, 0, 0.0213262, 0, 1, 0, -0.0213262, 0, -0.999773, 2.41759, 1.10776, -21.4567 )
+
+[node name="GoalTut" type="Area" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.759449, -7.18067, -44.9136 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GoalTut"]
+transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 2, -0.0380785, 3.75528, 0.345646 )
+shape = SubResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.759449, 2.96153, -44.9136 )
+light_color = Color( 0.243137, 1, 0, 1 )
+light_energy = 16.0
+omni_range = 13.048
+
+[node name="3dLabel" type="Sprite3D" parent="."]
+transform = Transform( 1.32433, 0, 0, 0, 1.46757, 0, 0, 0, 1, -2.16389, 2.93179, -4.87263 )
+flip_v = true
+texture = SubResource( 2 )
+
+[node name="Viewport" type="Viewport" parent="3dLabel"]
+size = Vector2( 300, 25 )
+transparent_bg = true
+script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="3dLabel/Viewport"]
+modulate = Color( 0.054902, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "As slugger, your ability (Left Click) is shooting"
+align = 1
+valign = 1
+
+[node name="3dLabel2" type="Sprite3D" parent="."]
+transform = Transform( 1.1509, 0, 0, 0, 1.40733, 0, 0, 0, 1, -0.90893, 2.25589, -4.85694 )
+flip_v = true
+texture = SubResource( 3 )
+
+[node name="Viewport2" type="Viewport" parent="3dLabel2"]
+size = Vector2( 407, 40 )
+transparent_bg = true
+script = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="3dLabel2/Viewport2"]
+modulate = Color( 0.0313726, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Enemies are green when they don't see you or red when hostile"
+align = 1
+valign = 1
+
+[node name="3dLabel3" type="Sprite3D" parent="."]
+transform = Transform( 1.30335, 0, 0, 0, 1.32473, 0, 0, 0, 1, -2.70335, 1.44629, -4.85694 )
+flip_v = true
+texture = SubResource( 4 )
+
+[node name="Viewport3" type="Viewport" parent="3dLabel3"]
+size = Vector2( 407, 40 )
+transparent_bg = true
+script = ExtResource( 8 )
+
+[node name="Label3" type="Label" parent="3dLabel3/Viewport3"]
+modulate = Color( 0.0784314, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "If an enemy touches you, you lose"
+align = 1
+valign = 1
+
+[node name="3dLabel4" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93495, 1.44629, -9.63145 )
+flip_v = true
+billboard = 1
+transparent = false
+texture = SubResource( 5 )
+
+[node name="Viewport4" type="Viewport" parent="3dLabel4"]
+size = Vector2( 407, 40 )
+transparent_bg = true
+script = ExtResource( 10 )
+
+[node name="Label4" type="Label" parent="3dLabel4/Viewport4"]
+modulate = Color( 0.0313726, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Proceed to green by shooting enemies"
+align = 1
+valign = 1

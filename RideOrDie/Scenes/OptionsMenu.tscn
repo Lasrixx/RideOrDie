@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/OptionsMenu.gd" type="Script" id=1]
+[ext_resource path="res://clowLogo.png" type="Texture" id=2]
+[ext_resource path="res://GMTK Logos/GMTK Jam 2022.png" type="Texture" id=3]
+[ext_resource path="res://Pictures/rideordie.jpg" type="Texture" id=4]
+
+[node name="OptionsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1000.0
+margin_bottom = 830.0
+rect_scale = Vector2( 20, 20 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_left = 260.0
+margin_top = 168.0
+margin_right = 803.0
+margin_bottom = 471.0
+text = "This is our first game jam as a team.
+
+The game was done for the GMTK Game Jam 2022 of the theme \"Roll of the Dice\"
+
+Our idea was to make a First-Person game where your \"ability\" is decided by a roll 
+of the dice at the beginning.
+
+This then changes how you approach the level, as the level is designed such to make
+every roll equally as viable.
+
+Our game consists of three characters with a different ability each:
+Slugger - Can shoot enemies, thus able to get past enemies without sneaking
+Dwayne - Can pick up containers to use as cover or break certain walls
+Dash - Has a directional dash that can also dash through most walls.
+
+Hope you enjoy the game! Have a good day!! :))
+
+That's the team logo bottom left if you were wondering ;)"
+valign = 1
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 823.0
+margin_top = 528.0
+margin_right = 958.0
+margin_bottom = 548.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 792.0
+margin_top = 23.0
+margin_right = 1792.0
+margin_bottom = 853.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = -62.0
+margin_top = 383.0
+margin_right = 1858.0
+margin_bottom = 1463.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 35.0
+margin_top = 23.0
+margin_right = 1549.0
+margin_bottom = 1537.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

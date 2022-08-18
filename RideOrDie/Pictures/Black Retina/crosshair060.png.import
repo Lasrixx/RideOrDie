@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/crosshair060.png-e9f5578b6b8a075b0b065d35c4e4653a.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Pictures/Black Retina/crosshair060.png"
+dest_files=[ "res://.import/crosshair060.png-e9f5578b6b8a075b0b065d35c4e4653a.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

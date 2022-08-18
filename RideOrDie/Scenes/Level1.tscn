@@ -1,0 +1,656 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scenes/PlayerDash.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/StartUpManager.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/PlayerGrab.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Crate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/wallA.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/DestructArea.gd" type="Script" id=11]
+[ext_resource path="res://Models/dots.material" type="Material" id=12]
+[ext_resource path="res://Scenes/Goal.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/Viewport.gd" type="Script" id=14]
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 10.2, 5.2, 0.6 )
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("3dLabel/Viewport")
+
+[node name="Level" type="Spatial"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0255299, 1.90735e-06, -0.01301 )
+
+[node name="StartUpManager" type="Spatial" parent="."]
+script = ExtResource( 4 )
+
+[node name="PlayerSpawn" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4196, 7.92215, -42.5011 )
+
+[node name="GUI" parent="." instance=ExtResource( 7 )]
+
+[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1674, 1.10776, 0 )
+
+[node name="Enemy5" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.82892, 0, -0.559367, 0, 1, 0, 0.559367, 0, -0.82892, -15.0194, 1.10776, -23.3903 )
+
+[node name="Enemy8" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.82892, 0, -0.559367, 0, 1, 0, 0.559367, 0, -0.82892, 19.3448, 1.10776, -37.3433 )
+
+[node name="Enemy9" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.752127, 0, 0.659018, 0, 1, 0, -0.659018, 0, 0.752127, 30.8793, 1.10776, -21.5237 )
+
+[node name="Enemy15" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.752127, 0, 0.659018, 0, 1, 0, -0.659018, 0, 0.752127, 27.3676, 1.10776, -9.40436 )
+
+[node name="Enemy16" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.741929, 0, -0.670478, 0, 1, 0, 0.670478, 0, 0.741929, 32.5853, 1.10776, -9.92937 )
+
+[node name="Enemy17" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.741929, 0, -0.670478, 0, 1, 0, 0.670478, 0, 0.741929, 17.6343, 1.10776, -1.14178 )
+
+[node name="Enemy10" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.765011, 0, 0.644017, 0, 1, 0, -0.644017, 0, -0.765011, 31.5752, 1.10776, -36.279 )
+
+[node name="Enemy34" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.962389, 0, -0.271676, 0, 1, 0, 0.271676, 0, 0.962389, 46.6172, 1.10776, -35.3544 )
+
+[node name="Enemy35" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.229557, 0, 0.973295, 0, 1, 0, -0.973295, 0, 0.229557, 45.8805, 1.10776, -26.577 )
+
+[node name="Enemy36" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.925758, 0, 0.378115, 0, 1, 0, -0.378115, 0, 0.925758, 45.8805, 1.10776, -0.161064 )
+
+[node name="Enemy11" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.830547, 0, -0.556948, 0, 1, 0, 0.556948, 0, 0.830547, 19.8025, 1.10776, -21.9213 )
+
+[node name="Enemy12" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.830547, 0, -0.556948, 0, 1, 0, 0.556948, 0, 0.830547, 24.4964, 1.10776, -28.0954 )
+
+[node name="Enemy6" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.330778, 0, 0.943709, 0, 1, 0, -0.943709, 0, 0.330778, -17.0589, 1.10776, -31.7043 )
+
+[node name="Enemy7" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.894373, 0, -0.447322, 0, 1, 0, 0.447322, 0, 0.894373, -28.4086, 1.10776, -19.4475 )
+
+[node name="Enemy13" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.950418, 0, 0.310975, 0, 1, 0, -0.310975, 0, 0.950418, -12.7981, 1.95453, -26.9713 )
+
+[node name="Enemy14" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.950418, 0, 0.310975, 0, 1, 0, -0.310975, 0, 0.950418, -18.747, 1.95453, -20.1542 )
+
+[node name="Enemy19" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.950418, 0, 0.310975, 0, 1, 0, -0.310975, 0, 0.950418, -40.3853, 1.95453, 23.988 )
+
+[node name="Enemy20" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.982558, 0, -0.185958, 0, 1, 0, 0.185958, 0, 0.982558, -46.1172, 1.95453, 23.988 )
+
+[node name="Enemy21" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.776805, 0, -0.629741, 0, 1, 0, 0.629741, 0, 0.776805, -32.3286, 1.49408, 18.8593 )
+
+[node name="Enemy24" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.990731, 0, 0.135836, 0, 1, 0, -0.135836, 0, -0.990731, -35.7661, 1.49408, 38.8159 )
+
+[node name="Enemy25" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.584066, 0, 0.811706, 0, 1, 0, -0.811706, 0, -0.584066, -30.5457, 1.49408, 40.7718 )
+
+[node name="Enemy26" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.801703, 0, -0.597723, 0, 1, 0, 0.597723, 0, -0.801703, -28.7158, 1.49408, 25.6035 )
+
+[node name="Enemy22" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.806352, 0, 0.591436, 0, 1, 0, -0.591436, 0, 0.806352, -9.37503, 1.49408, 13.9785 )
+
+[node name="Enemy27" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.94476, 0, -0.327762, 0, 1, 0, 0.327762, 0, 0.94476, -3.5813, 1.49408, 20.052 )
+
+[node name="Enemy31" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.94476, 0, -0.327762, 0, 1, 0, 0.327762, 0, 0.94476, 9.92173, 1.49408, 20.9426 )
+
+[node name="Enemy32" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.950797, 0, 0.309814, 0, 1, 0, -0.309814, 0, 0.950797, 15.8965, 1.49408, 20.9426 )
+
+[node name="Enemy33" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.589478, 0, 0.807784, 0, 1, 0, -0.807784, 0, 0.589478, 17.7568, 1.49408, 14.4238 )
+
+[node name="Enemy28" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.770257, 0, 0.637733, 0, 1, 0, -0.637733, 0, 0.770257, 1.05798, 1.49408, 46.275 )
+
+[node name="Enemy29" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.319489, 0, 0.94759, 0, 1, 0, -0.94759, 0, -0.319489, -0.107302, 1.49408, 33.457 )
+
+[node name="Enemy30" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.133173, 0, -0.991093, 0, 1, 0, 0.991093, 0, 0.133173, 21.7026, 1.49408, 12.727 )
+
+[node name="Enemy23" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.550729, 0, -0.834684, 0, 1, 0, 0.834684, 0, 0.550729, -26.3543, 1.49408, 1.0033 )
+
+[node name="Enemy4" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4539, 1.14508, -30.9449 )
+
+[node name="Enemy3" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( -0.901878, 0, -0.431991, 0, 1, 0, 0.431991, 0, -0.901878, 4.13091, 1.10776, 0 )
+
+[node name="Enemy18" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.372891, 0, 0.927875, 0, 1, 0, -0.927875, 0, 0.372891, -7.99992, 1.18322, -5.82549 )
+
+[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+transform = Transform( 0.422197, -0.0190333, -0.906304, -0.00028529, 0.999777, -0.0211292, 0.906504, 0.00917924, 0.422097, 0, 1.10776, 2.66712 )
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -42.9334, 3.00393, -44.1801 )
+visible = false
+
+[node name="PlayerGrab" parent="." groups=["Player"] instance=ExtResource( 5 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -42.7127, 3.09674, -44.0486 )
+visible = false
+
+[node name="PlayerDash" parent="." groups=["Player"] instance=ExtResource( 1 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -42.6577, 3.30402, -44.0014 )
+visible = false
+
+[node name="Crate" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.55355, 2.974, -28.8096 )
+
+[node name="Crate2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2619, 2.974, -19.5696 )
+
+[node name="wallA" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0602665, 37.4762 )
+
+[node name="wallA2" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.4734, 0.0917759, 12.4881 )
+
+[node name="wallA3" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -12.4614 )
+
+[node name="wallA4" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 25, -49.462, 0.115404, -37.1257 )
+
+[node name="wallA5" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 26, 0, 15, 0, -1, 0, -1.1365e-06, -36.5274, 0.0167031, -49.8342 )
+
+[node name="wallA6" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, -11.1244, 0.0167031, -49.8342 )
+
+[node name="wallA7" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 13.8144, 0.0167031, -49.8342 )
+
+[node name="wallA8" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 25, 0, 15, 0, -1, 0, -1.09278e-06, 38.4952, 0.0167031, -49.8342 )
+
+[node name="wallA9" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -37.1267 )
+
+[node name="wallA10" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, -12.2871 )
+
+[node name="wallA11" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -2.18557e-06, 0, 15, 0, 8.74228e-08, 0, -25, 50.021, 0.0167031, 12.483 )
+
+[node name="wallA12" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -3.7749e-06, 0, 15, 0, 1.50996e-07, 0, -25, 50.021, 0.0167031, 37.2635 )
+
+[node name="wallA13" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -27, 0, 15, 0, 1, 0, -1.18021e-06, 38.0534, 0.0167031, 50.3777 )
+
+[node name="wallA14" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, 12.0842, 0.0167031, 50.3777 )
+
+[node name="wallA15" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -12.9327, 0.0167031, 50.3777 )
+
+[node name="wallA16" parent="." groups=["Sides"] instance=ExtResource( 9 )]
+transform = Transform( 1.19249e-08, 0, -25, 0, 15, 0, 1, 0, 2.98122e-07, -37.7442, 0.0167031, 50.3777 )
+
+[node name="Wall" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7552, -0.176014, -38.9614 )
+
+[node name="Wall2" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.0419, -0.176014, -38.9614 )
+
+[node name="Wall16" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1428, -0.176014, -38.9614 )
+
+[node name="Wall17" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95214, -0.176014, -38.9614 )
+
+[node name="Wall18" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.95214, -0.176014, -34.024 )
+
+[node name="Wall24" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.4814, -0.353463, -18.9556 )
+
+[node name="Wall26" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.4814, -0.353463, -37.822 )
+
+[node name="Wall28" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1999, -0.353463, -38.6033 )
+
+[node name="Wall34" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.007, -0.353463, -38.6033 )
+
+[node name="Wall35" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5458, -0.353463, -31.5227 )
+
+[node name="Wall36" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8342, -0.353463, -24.0088 )
+
+[node name="Wall29" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2079, -0.353463, -38.6033 )
+
+[node name="Wall30" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.1879, -0.353463, -33.8364 )
+
+[node name="Wall31" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.1879, -0.353463, -24.4434 )
+
+[node name="Wall32" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4729, -0.353463, -19.5517 )
+
+[node name="Wall27" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.4814, -0.353463, -44.8788 )
+
+[node name="SpotLight" type="SpotLight" parent="Wall27"]
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0.515099, 0, -7.66445 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 3.98
+
+[node name="Wall19" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.95214, -0.176014, -24.7031 )
+
+[node name="Wall20" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6007, -0.364156, -14.2715 )
+
+[node name="Wall21" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5965, -0.364156, -14.2715 )
+
+[node name="Wall22" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9826, -0.364156, -14.2715 )
+
+[node name="Wall23" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4965, -2.30127, -14.2715 )
+
+[node name="Wall15" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1113, -1.89666, -38.9042 )
+
+[node name="Wall38" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0819, -0.346988, 5.54517 )
+
+[node name="Wall39" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5786, -0.346988, 5.54517 )
+
+[node name="Wall40" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3603, -0.346988, 5.54517 )
+
+[node name="Wall11" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.2798, -0.176014, -34.1427 )
+
+[node name="Wall12" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.2798, -0.176014, -29.4503 )
+
+[node name="Wall13" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.0295, -0.176014, -24.6764 )
+
+[node name="Wall14" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5404, -0.176014, -24.6764 )
+
+[node name="Goal" type="Area" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 43.4043, 0.550903, 43.4331 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Goal"]
+transform = Transform( 8, 0, 0, 0, 4, 0, 0, 0, 5, -0.381994, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.4043, 10.6931, 43.4331 )
+light_color = Color( 0.243137, 1, 0, 1 )
+light_energy = 16.0
+omni_range = 13.048
+
+[node name="Wall37" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2247, -0.353034, -9.02956 )
+
+[node name="Wall41" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2247, -0.353034, -0.650573 )
+
+[node name="Wall42" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2247, -0.353034, 8.65695 )
+
+[node name="Wall45" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2533, -0.353034, 0.907498 )
+
+[node name="Wall46" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4423, -0.353034, 4.20033 )
+
+[node name="Wall47" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6583, -0.353034, 4.20033 )
+
+[node name="Wall48" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4739, -0.353034, 4.20033 )
+
+[node name="Wall49" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14378, -0.353034, 6.25162 )
+
+[node name="Wall51" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1221, -0.353034, 33.8381 )
+
+[node name="Wall50" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3323, -0.353034, 16.2599 )
+
+[node name="Wall52" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3323, -0.353034, 35.3941 )
+
+[node name="Wall55" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.03782, -0.353034, 11.0436 )
+
+[node name="Wall56" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.43883, -0.353034, 30.7929 )
+
+[node name="Wall57" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0459933, -0.353034, 30.7929 )
+
+[node name="Wall58" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.74312, -0.353034, 30.7929 )
+
+[node name="Wall60" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.9538, -0.353034, 35.6513 )
+
+[node name="Wall61" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.9538, -0.353034, 38.8576 )
+
+[node name="Wall67" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7087, -0.353034, 43.6856 )
+
+[node name="Wall72" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3646, -0.353034, 43.6856 )
+
+[node name="Wall68" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8797, -0.353034, 29.0105 )
+
+[node name="Wall70" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6517, -0.353034, 29.0105 )
+
+[node name="Wall71" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9129, -0.353034, 29.0105 )
+
+[node name="Wall69" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39.6533, -0.353034, 23.6024 )
+
+[node name="Wall73" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39.6533, -0.353034, 28.2906 )
+
+[node name="Wall62" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1806, -0.353034, 10.3388 )
+
+[node name="Wall63" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1806, -0.353034, 17.5953 )
+
+[node name="Wall66" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1806, -0.353034, 23.9195 )
+
+[node name="Wall64" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3265, -0.353034, 18.7587 )
+
+[node name="Wall65" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.86, -0.353034, 18.7587 )
+
+[node name="Wall59" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.99554, -0.353034, 19.6823 )
+
+[node name="Wall53" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3323, -0.353034, 43.9692 )
+
+[node name="Wall54" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3323, -0.353034, 49.3266 )
+
+[node name="Wall43" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2247, -0.353034, 26.4104 )
+
+[node name="Wall44" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2247, -0.353034, 35.9407 )
+
+[node name="DestructableWall" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7909, -0.516752, -4.95149 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall2" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8653, -0.516752, -4.95149 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall2/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall5" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2429, -0.516752, 16.7541 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall5/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall9" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4142, -0.516752, -19.5396 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall9/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall11" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9996, -0.516752, 5.82174 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall11/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall10" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.4918, -0.516752, -28.3488 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall10/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall3" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1082, -0.516752, -4.95149 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall3/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall6" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 0.890189, 0, -0.455592, 0, 1, 0, 0.455592, 0, 0.890189, -18.9028, -0.516752, 29.2632 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall6/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall7" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.292, -0.516752, 25.9796 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall7/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="DestructableWall4" parent="." groups=["DestructWall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4493, -0.516752, -4.95149 )
+
+[node name="DestructArea" type="Area" parent="DestructableWall4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658115, 0 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DestructableWall4/DestructArea"]
+transform = Transform( 5.2, 0, 0, 0, 2, 0, 0, 0, 0.3, 0.0130234, 2.55311, -0.114543 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="DestructableWall4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0746117, 2.03679, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="Wall4" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6915, -0.373095, 6.29531 )
+
+[node name="Wall25" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8667, -0.373095, 24.5075 )
+
+[node name="Wall33" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1722, -0.373095, 24.5075 )
+
+[node name="Wall6" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.24081, -0.373095, -8.81859 )
+
+[node name="Wall7" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.7715, -0.344496, 0.820872 )
+
+[node name="Wall8" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.7715, -0.344496, -9.13094 )
+
+[node name="Wall9" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.6682, -0.363208, -14.2673 )
+
+[node name="Wall10" parent="." groups=["Wall"] instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.98229, -0.363208, -14.2673 )
+
+[node name="3dLabel" type="Sprite3D" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1.93807, 0, 1, 0, -4.37114e-08, 17.0373, 1.67184, -45.5523 )
+flip_v = true
+texture = SubResource( 4 )
+
+[node name="Viewport" type="Viewport" parent="3dLabel"]
+size = Vector2( 400, 31 )
+transparent_bg = true
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="3dLabel/Viewport"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Wonder if there's a route here?? hmmmm
+"
+align = 1
+valign = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]

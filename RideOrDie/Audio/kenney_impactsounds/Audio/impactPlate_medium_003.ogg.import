@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/impactPlate_medium_003.ogg-322e8b935dfd7d86aa54097f38aba789.oggstr"
+
+[deps]
+
+source_file="res://Audio/kenney_impactsounds/Audio/impactPlate_medium_003.ogg"
+dest_files=[ "res://.import/impactPlate_medium_003.ogg-322e8b935dfd7d86aa54097f38aba789.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

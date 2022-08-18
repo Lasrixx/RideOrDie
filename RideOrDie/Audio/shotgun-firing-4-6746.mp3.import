@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/shotgun-firing-4-6746.mp3-748aa155f30513f10b941ac8be31c112.mp3str"
+
+[deps]
+
+source_file="res://Audio/shotgun-firing-4-6746.mp3"
+dest_files=[ "res://.import/shotgun-firing-4-6746.mp3-748aa155f30513f10b941ac8be31c112.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

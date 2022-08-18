@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallA_door.obj-14dc5b8dbd17fc46409b326ba6cd4dd6.mesh"
+
+[deps]
+
+files=[ "res://.import/wallA_door.obj-14dc5b8dbd17fc46409b326ba6cd4dd6.mesh" ]
+
+source_file="res://Models/OBJ format/wallA_door.obj"
+dest_files=[ "res://.import/wallA_door.obj-14dc5b8dbd17fc46409b326ba6cd4dd6.mesh", "res://.import/wallA_door.obj-14dc5b8dbd17fc46409b326ba6cd4dd6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

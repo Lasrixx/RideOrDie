@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Gun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/kenney_impactsounds/Audio/9mm-pistol-shoot-short-reverb-7152.mp3" type="AudioStream" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.219608, 1, 0, 1 )
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="UI" type="Control" parent="."]
+margin_right = 1026.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractLabel" type="Label" parent="UI"]
+visible = false
+margin_left = 9.0
+margin_top = 515.0
+margin_right = 1022.0
+margin_bottom = 546.0
+text = "Press E to interact"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="progressbar" type="ProgressBar" parent="UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.0
+margin_top = 57.0
+margin_right = 29.0
+margin_bottom = 71.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_scale = Vector2( 1, 0.8 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, -0.259652, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="Head" type="Camera" parent="."]
+current = true
+fov = 104.2
+
+[node name="GunShoot" type="RayCast" parent="Head"]
+enabled = true
+cast_to = Vector3( 0, 0, -200 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCast" type="RayCast" parent="Head"]
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Hand" type="Spatial" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.552264 )
+
+[node name="Gun" parent="Head/Hand" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.463711, -0.275836, 0.375644 )
+
+[node name="shootGun" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+unit_db = -6.372
+pitch_scale = 2.16

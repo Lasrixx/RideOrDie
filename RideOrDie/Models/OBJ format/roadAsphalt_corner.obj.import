@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadAsphalt_corner.obj-cbde9192e6899aaeda8fc476b381d729.mesh"
+
+[deps]
+
+files=[ "res://.import/roadAsphalt_corner.obj-cbde9192e6899aaeda8fc476b381d729.mesh" ]
+
+source_file="res://Models/OBJ format/roadAsphalt_corner.obj"
+dest_files=[ "res://.import/roadAsphalt_corner.obj-cbde9192e6899aaeda8fc476b381d729.mesh", "res://.import/roadAsphalt_corner.obj-cbde9192e6899aaeda8fc476b381d729.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallBroken_typeA.obj-5457f46e79ad57e704f15a7cad75cc5e.mesh"
+
+[deps]
+
+files=[ "res://.import/wallBroken_typeA.obj-5457f46e79ad57e704f15a7cad75cc5e.mesh" ]
+
+source_file="res://Models/OBJ format/wallBroken_typeA.obj"
+dest_files=[ "res://.import/wallBroken_typeA.obj-5457f46e79ad57e704f15a7cad75cc5e.mesh", "res://.import/wallBroken_typeA.obj-5457f46e79ad57e704f15a7cad75cc5e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

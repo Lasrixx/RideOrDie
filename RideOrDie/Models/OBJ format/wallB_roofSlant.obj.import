@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallB_roofSlant.obj-b27e758be7f32cba4dc6ac6fd8677c0b.mesh"
+
+[deps]
+
+files=[ "res://.import/wallB_roofSlant.obj-b27e758be7f32cba4dc6ac6fd8677c0b.mesh" ]
+
+source_file="res://Models/OBJ format/wallB_roofSlant.obj"
+dest_files=[ "res://.import/wallB_roofSlant.obj-b27e758be7f32cba4dc6ac6fd8677c0b.mesh", "res://.import/wallB_roofSlant.obj-b27e758be7f32cba4dc6ac6fd8677c0b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

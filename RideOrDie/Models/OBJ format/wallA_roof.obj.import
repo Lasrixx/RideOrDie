@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallA_roof.obj-4bcb1c28a752bbba1ecad7125f0c879a.mesh"
+
+[deps]
+
+files=[ "res://.import/wallA_roof.obj-4bcb1c28a752bbba1ecad7125f0c879a.mesh" ]
+
+source_file="res://Models/OBJ format/wallA_roof.obj"
+dest_files=[ "res://.import/wallA_roof.obj-4bcb1c28a752bbba1ecad7125f0c879a.mesh", "res://.import/wallA_roof.obj-4bcb1c28a752bbba1ecad7125f0c879a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

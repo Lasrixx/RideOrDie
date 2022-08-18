@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/9mm-pistol-shoot-short-reverb-7152.mp3-390d43118b69fdeb7e67808e250363ca.mp3str"
+
+[deps]
+
+source_file="res://Audio/9mm-pistol-shoot-short-reverb-7152.mp3"
+dest_files=[ "res://.import/9mm-pistol-shoot-short-reverb-7152.mp3-390d43118b69fdeb7e67808e250363ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
